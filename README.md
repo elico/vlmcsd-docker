@@ -13,3 +13,9 @@ docker-compose up -d
 docker build -t vlmcsd .
 docker run -idt -p 1688:1688 vlmcsd
 ```
+
+Build multi arch
+```
+docker buildx build --platform linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64,linux/s390x,linux/386,linux/arm/v7,linux/arm/v6 -t vlmcsd:latest .
+
+```
